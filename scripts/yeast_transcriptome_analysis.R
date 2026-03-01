@@ -33,12 +33,12 @@ df_yeast_metadata <- data.frame(
 )
 
 # Importing quant files from Salmon
-files <- file.path("quants", df_yeast_metadata$SRA, "quant.sf")
+files <- file.path("../quants", df_yeast_metadata$SRA, "quant.sf")
 names(files) <- df_yeast_metadata$SRA
 files
 
 # Creating tx2gene table from GTF file
-gtf_yeast <- import("genomic.gtf")
+gtf_yeast <- import("../genomic.gtf")
 txdb <- makeTxDbFromGRanges(gtf_yeast)
 k <- keys(txdb, keytype = "TXNAME")
 tx2gene <- AnnotationDbi::select(txdb, k, "GENEID", "TXNAME")
@@ -569,3 +569,35 @@ dotplot(all_GO, showCategory = 5) +
 dotplot(all_KEGG) +
   theme(plot.title = element_text(face = "bold", size = 18)) +
   ggtitle("Comparison of KEGG Pathways Across Stages")
+
+# Upset plots for each comparison
+p1 <- upsetplot(evt_GO_results$enrich_res) + 
+  ggtitle("Upset Plot for Thin vs Early") +
+  theme(plot.title = element_text(face = "bold", size = 16))
+
+p2 <- upsetplot(tvm_GO_results$enrich_res) + 
+  ggtitle("Upset Plot for Mature vs Thin") +
+  theme(plot.title = element_text(face = "bold", size = 16))
+
+p3 <- upsetplot(evm_GO_results$enrich_res) + 
+  ggtitle("Upset Plot for Mature vs Early") +
+  theme(plot.title = element_text(face = "bold", size = 16))
+
+plot_grid(p1, p2, p3)
+rm(p1, p2, p3)
+
+# Induced GO DAG for pairwise comparisons
+goplot(evt_GO_results$enrich_res) + 
+  ggtitle("Enriched GO induced graph for Thin vs Early") +
+  theme(plot.title = element_text(face = "bold", size = 16, hjust = 0.5))
+
+goplot(tvm_GO_results$enrich_res) + 
+  ggtitle("Enriched GO induced graph for Mature vs Thin") +
+  theme(plot.title = element_text(face = "bold", size = 16, hjust = 0.5))
+
+goplot(evm_GO_results$enrich_res) + 
+  ggtitle("Enriched GO induced graph for Mature vs Early") +
+  theme(plot.title = element_text(face = "bold", size = 16, hjust = 0.5))
+
+
+
