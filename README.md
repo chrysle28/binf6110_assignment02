@@ -9,7 +9,7 @@ The negative binomial distribution is typically used to model RNA-Seq data as it
 
 Following differential gene expression analysis, 
 
-In this project, yeast transcripts obtained from the study conducted by Mardanov et al. (2020) will be quantified and analyzed to determine differentially expressed genes and enrichment of genes in biological processes and metabolic pathways. The yeast transcripts reflect biological replicates from three distinct stages of velum development. As biofilm form
+In this project, _Saccharomyces cerevisiae_ flor strain transcripts obtained from the study conducted by Mardanov et al. (2020) will be quantified and analyzed to determine differentially expressed genes and enrichment of genes in biological processes and metabolic pathways. The flor yeast transcripts reflect biological replicates from three distinct stages of velum development during the aging of wine. Biofilm formation allows yeast to access oxygen for efficient oxidative metabolism (Alexandre, 2013), in turn allowing yeast to 
 
 
 ## **2 | Methods**
@@ -41,7 +41,7 @@ multiqc ./
 **Fig. 2**: Heatmap displaying basic status checks for each transcriptome dataset. Green indicates normal results, orange indicates slightly abnormal results, and red indicates very unusual results.
 
 
-### **2.3 | Quantification **
+### **2.3 | Quantification**
 Quantification of the transcripts was performed using Salmon (v1.10.3). A full selective alignment paradigm, as described by Srivastava et al. (2020), was used during quantification. This involved creating a decoy file with the reference genome as the decoy sequences. An index was created using the concatenated transcriptome and genome, along with the decoy sequences.
 ```
 grep "^>" ref/ref.fna | cut -d " " -f 1 > decoys.txt
@@ -113,7 +113,7 @@ Dot plots were used to visualize the upregulation or downregulation of genes in 
 **Fig. 8**: Dot plots visualizing upregulated and downregulated genes for each pairwise comparison according to their annotated biological process (via Gene Ontology).
 
 <img width="2100" height="1023" alt="KEGG_comparison" src="https://github.com/user-attachments/assets/4031e1af-a1bc-4608-8242-ab01213cf036" />
-**Fig. 89**: Dot plots visualizing upregulated and downregulated genes for each pairwise comparison according to their annotated metabolic pathway (via KEGG).
+**Fig. 9**: Dot plots visualizing upregulated and downregulated genes for each pairwise comparison according to their annotated metabolic pathway (via KEGG).
 
 
 ## **4 | Discussion**
