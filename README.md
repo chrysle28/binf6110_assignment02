@@ -34,12 +34,12 @@ multiqc ./
 ```
 <img width="1600" height="800" alt="fastqc_per_base_sequence_quality_plot" src="https://github.com/user-attachments/assets/e02441b1-0741-439a-9af9-aa42ca93a471" />
 
-**Fig. 1**: Per base quality scores of each transcriptome dataset, as generated via FastQC and visualized using MultiQC.
+Fig. 1: Per base quality scores of each transcriptome dataset, as generated via FastQC and visualized using MultiQC.
 
 
 <img width="1600" height="800" alt="fastqc_heatmap" src="https://github.com/user-attachments/assets/2b1764c4-634a-4401-934b-2c9bb19d46c5" />
 
-**Fig. 2**: Heatmap displaying basic status checks for each transcriptome dataset. Green indicates normal results, orange indicates slightly abnormal results, and red indicates very unusual results.
+Fig. 2: Heatmap displaying basic status checks for each transcriptome dataset. Green indicates normal results, orange indicates slightly abnormal results, and red indicates very unusual results.
 
 
 ### **2.3 | Quantification**
@@ -83,12 +83,12 @@ A PCA plot and a heatmap were created to visualize the overall structure of the 
 
 <img width="1000" height="587" alt="PCA_plot" src="https://github.com/user-attachments/assets/d0d2d5a9-96c1-49a7-95ff-5a89112c6d52" />
 
-**Fig. 3**: PCA plot of the quantified reads, with each replicate represented by a different color (early: red, thin: green, mature: blue).
+Fig. 3: PCA plot of the quantified reads, with each replicate represented by a different color (early: red, thin: green, mature: blue).
 
 
 <img width="1400" height="957" alt="overall_heatmap" src="https://github.com/user-attachments/assets/6ffa9b18-616e-428c-9371-29657cb147fc" />
 
-**Fig. 4**: Heatmap showing the sample distances of the replicates. Runs SRR10551663 to 65 are from the early stage, SRR10551660 to 62 are from the thin stage, while runs SRR10551657 to 59 are from the mature stage.
+Fig. 4: Heatmap showing the sample distances of the replicates. Runs SRR10551663 to 65 are from the early stage, SRR10551660 to 62 are from the thin stage, while runs SRR10551657 to 59 are from the mature stage.
 
 
 ### **3.2 | Differential Gene Expression**
@@ -97,24 +97,24 @@ Two MA plots for each pairwise comparison were created, with top genes being lab
 
 <img width="1800" height="1440" alt="MA_plots" src="https://github.com/user-attachments/assets/35c10be7-36da-48a4-8b93-b1034cc23229" />
 
-**Fig. 5**: MA plots for each pairwise comparison, with the top 5 genes (selected by lowest adjusted P-value or highest absolute log fold change) labeled by ORF/SGD identifier. Statistically significant (p < 0.05) genes are colored in red (upregulated) or blue (downregulated), while non-significant genes are colored in gray. Top row: MA plots for the thin (test) vs early (reference) comparison. Middle row: MA plots for the mature (test) vs thin (reference) comparison. Bottom row: MA plots for the mature (test) vs early (reference) comparison.
+Fig. 5: MA plots for each pairwise comparison, with the top 5 genes (selected by lowest adjusted P-value or highest absolute log fold change) labeled by ORF/SGD identifier. Statistically significant (p < 0.05) genes are colored in red (upregulated) or blue (downregulated), while non-significant genes are colored in gray. Top row: MA plots for the thin (test) vs early (reference) comparison. Middle row: MA plots for the mature (test) vs thin (reference) comparison. Bottom row: MA plots for the mature (test) vs early (reference) comparison.
 
 
 <img width="1800" height="800" alt="volcano_plots" src="https://github.com/user-attachments/assets/7985ec00-635c-40a3-b87a-70829f08a242" />
 
-**Fig. 6**: Volcano plots for each pairwise comparison, with genes labeled according to adjusted P-value or log fold change. Statistically significant (p < 0.05) genes are colored in red (upregulated) or blue (downregulated), while non-significant genes are colored in gray.
+Fig. 6: Volcano plots for each pairwise comparison, with genes labeled according to adjusted P-value or log fold change. Statistically significant (p < 0.05) genes are colored in red (upregulated) or blue (downregulated), while non-significant genes are colored in gray.
 
 <img width="1200" height="820" alt="heatmap (1)" src="https://github.com/user-attachments/assets/7ecdc4b5-ea7b-4191-94fc-b17bbb2dfac3" />
-**Fig. 7**: Heatmap showing the top 30 most significant genes (based on adjusted P-value). Samples are clustered by row, with genes represented by their ORF/SGD identifiers.
+Fig. 7: Heatmap showing the top 30 most significant genes (based on adjusted P-value). Samples are clustered by row, with genes represented by their ORF/SGD identifiers.
 
 ### **3.3 | Functional Annotation**
 Dot plots were used to visualize the upregulation or downregulation of genes in the three stages, with genes functionally annotated to a biological process or a metabolic pathway. In the early stage, there is a consistent upregulation of genes involved in glycolytic processes, transmembrane transport, or nucleotide metabolism and catabolism (Fig. 8), with an enrichment of genes in amino acid and sugar metabolic/catabolic pathways as well as molecule biosynthesis (Fig. 9). The thin stage displays upregulation in processes and pathways related to oxidative metabolism (e.g. metabolism of fatty acids, carbon, and pyruvate) and lipid metabolic/biosynthetic processes (Fig. 8, 9). In the mature stage, upregulated genes are enriched in energy-generating and mitochondrion-related processes (Fig.8) and pathways in molecular metabolism, oxidative phosphorylation, and the ribosome (Fig. 9).
 
 <img width="2100" height="1023" alt="GO_BP_comparisons" src="https://github.com/user-attachments/assets/6c9d339a-6785-4c79-950c-380eaa4a92f3" />
-**Fig. 8**: Dot plots visualizing upregulated and downregulated genes for each pairwise comparison according to their annotated biological process (via Gene Ontology).
+Fig. 8: Dot plots visualizing upregulated and downregulated genes for each pairwise comparison according to their annotated biological process (via Gene Ontology).
 
 <img width="2100" height="1023" alt="KEGG_comparison" src="https://github.com/user-attachments/assets/4031e1af-a1bc-4608-8242-ab01213cf036" />
-**Fig. 9**: Dot plots visualizing upregulated and downregulated genes for each pairwise comparison according to their annotated metabolic pathway (via KEGG).
+Fig. 9: Dot plots visualizing upregulated and downregulated genes for each pairwise comparison according to their annotated metabolic pathway (via KEGG).
 
 
 ## **4 | Discussion**
