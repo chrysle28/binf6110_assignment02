@@ -104,7 +104,7 @@ Two MA plots for each pairwise comparison were created, with top genes being lab
 
 **Fig. 6**: Volcano plots for each pairwise comparison, with genes labeled according to adjusted P-value or log fold change. Statistically significant (p < 0.05) genes are colored in red (upregulated) or blue (downregulated), while non-significant genes are colored in gray.
 
-
+<img width="1200" height="820" alt="heatmap (1)" src="https://github.com/user-attachments/assets/7ecdc4b5-ea7b-4191-94fc-b17bbb2dfac3" />
 **Fig. 7**: Heatmap showing the top 30 most significant genes (based on adjusted P-value). Samples are clustered by row, with genes represented by their ORF/SGD identifiers.
 
 ### **3.3 | Functional Annotation**
