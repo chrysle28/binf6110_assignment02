@@ -75,7 +75,6 @@ Functional annotation and over-representation analysis was conducted using the c
 ### **2.5 | Visualization of Results**
 Results from the DGE and ORA were visualized using several packages: ggplot2 (v4.0.2), ggpubr (v0.6.3), EnhancedVolcano (v1.28.2), pheatmap (v1.0.13), enrichplot (v1.31.4), and cowplot (v1.2.0).  
 
-ADD CITATIONS FOR METHODS
 
 ## **3 | Results**
 
