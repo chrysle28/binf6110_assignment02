@@ -73,7 +73,7 @@ evt_LFC <- lfcShrink(dds_e,
 Functional annotation and over-representation analysis was conducted using the clusterProfiler package (v 4.18.4). Both GO and KEGG enrichment were performed to determine any overrepresented biological processes or metabolic pathways in each stage.
 
 ### **2.5 | Visualization of Results**
-Results from the DGE and ORA were visualized using several packages: ggplot2 (v4.0.2), ggpubr (v0.6.3), EnhancedVolcano (v1.28.2), pheatmap (v1.0.13), enrichplot (v1.31.4), and cowplot (v1.2.0).  
+Results from the DGE and ORA were visualized using several packages: ggplot2 (v4.0.2), ggpubr (v0.6.3), EnhancedVolcano (v1.28.2), pheatmap (v1.0.13), enrichplot (v1.31.4), and cowplot (v1.2.0). A PCA plot and heatmap was used to visualize the overall data structure. MA plots and volcano plots were created to visualize the DGE results, while dot plots were used to visualize enriched biological processes and metabolic pathways.
 
 
 ## **3 | Results**
